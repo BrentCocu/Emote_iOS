@@ -27,6 +27,7 @@
 		076AAB4421F5081F0073D68A /* Moment+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076AAB4221F5081F0073D68A /* Moment+CoreDataClass.swift */; };
 		076AAB4521F5081F0073D68A /* Moment+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076AAB4321F5081F0073D68A /* Moment+CoreDataProperties.swift */; };
 		076AAB4721F50DA40073D68A /* MomentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076AAB4621F50DA40073D68A /* MomentTableViewCell.swift */; };
+		076AAB4A21F5353A0073D68A /* ArrayChoiceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076AAB4921F5353A0073D68A /* ArrayChoiceTableViewController.swift */; };
 		FC1F9029305A1E19D2A52C0D /* Pods_Emote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526EC1002C9981B3215B1BC5 /* Pods_Emote.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		076AAB4221F5081F0073D68A /* Moment+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moment+CoreDataClass.swift"; sourceTree = "<group>"; };
 		076AAB4321F5081F0073D68A /* Moment+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moment+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		076AAB4621F50DA40073D68A /* MomentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentTableViewCell.swift; sourceTree = "<group>"; };
+		076AAB4921F5353A0073D68A /* ArrayChoiceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayChoiceTableViewController.swift; sourceTree = "<group>"; };
 		21F6378EC4D4A1087E8DAA4F /* Pods-Emote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emote.release.xcconfig"; path = "Pods/Target Support Files/Pods-Emote/Pods-Emote.release.xcconfig"; sourceTree = "<group>"; };
 		526EC1002C9981B3215B1BC5 /* Pods_Emote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1328618A96FB5C2F4D95D55 /* Pods-Emote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Emote/Pods-Emote.debug.xcconfig"; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		0709C52821F37396004F2A48 /* Emote */ = {
 			isa = PBXGroup;
 			children = (
+				076AAB4821F5351A0073D68A /* Helpers */,
 				076AAB3521F4D8E50073D68A /* Extensions */,
 				075D3E5B21F41640004E6A2F /* Views */,
 				0709C54021F387E6004F2A48 /* Models */,
@@ -162,6 +165,14 @@
 				076AAB3A21F4FCBC0073D68A /* UIImageViewExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		076AAB4821F5351A0073D68A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				076AAB4921F5353A0073D68A /* ArrayChoiceTableViewController.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		3CBF39A31FAB9D1A61F0628A /* Pods */ = {
@@ -321,6 +332,7 @@
 				076AAB4421F5081F0073D68A /* Moment+CoreDataClass.swift in Sources */,
 				076AAB3721F4D8FD0073D68A /* UIColorExtension.swift in Sources */,
 				0709C52A21F37396004F2A48 /* AppDelegate.swift in Sources */,
+				076AAB4A21F5353A0073D68A /* ArrayChoiceTableViewController.swift in Sources */,
 				0709C75421F3F198004F2A48 /* Emotion+CoreDataClass.swift in Sources */,
 				076AAB3B21F4FCBC0073D68A /* UIImageViewExtension.swift in Sources */,
 				076AAB3921F4F9E90073D68A /* EditMomentController.swift in Sources */,

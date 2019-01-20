@@ -301,6 +301,9 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="161" id="1wE-aI-rYh"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="showEmotionList:" destination="Epa-hh-tjm" eventType="touchUpInside" id="d4C-lf-kPG"/>
+                                        </connections>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="PbD-VX-9nc">
                                         <rect key="frame" x="32" y="193" width="311" height="295"/>

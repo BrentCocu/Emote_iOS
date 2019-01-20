@@ -25,14 +25,18 @@ class EditMomentController: UIViewController, UITextFieldDelegate, UITextViewDel
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		color.backgroundColor = emotion?.color
-		content.text = _content
-		name.text = _name
-		deleteButton.isHidden = (moment == nil)
+		updateComponents()
 		
 		// hide keyboard on 'done'
 		name.delegate = self
 		content.delegate = self
+	}
+	
+	private func updateComponents() {
+		color.backgroundColor = emotion?.color
+		content.text = _content
+		name.text = emotion?.name
+		deleteButton.isHidden = (moment == nil)
 	}
 	
 	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -46,6 +50,30 @@ class EditMomentController: UIViewController, UITextFieldDelegate, UITextViewDel
 			return false
 		}
 		return true
+	}
+	
+	@IBAction func showEmotionList(_ sender: UIView) {
+		let _emotions = EmotionRepository.shared.getAll()
+		let emotions = _emotions?.map({(emotion) -> String in return emotion.name!})
+		let controller = ArrayChoiceTableViewController(emotions ?? []) { (result) in
+			let index = _emotions?.firstIndex(where: { (emotion) -> Bool in
+				emotion.name == result
+			})
+			self.emotion = _emotions![index!]
+			self.updateComponents()
+		}
+		controller.preferredContentSize = CGSize(width: 300, height: 200)
+		showPopup(controller, sourceView: sender)
+	}
+	
+	private func showPopup(_ controller: UIViewController, sourceView: UIView) {
+		controller.modalPresentationStyle = .popover
+		controller.preferredContentSize = CGSize(width: 300, height: 200)
+		let presentationController = controller.presentationController as! UIPopoverPresentationController
+		presentationController.sourceView = sourceView
+		presentationController.sourceRect = sourceView.bounds
+		presentationController.permittedArrowDirections = [.down, .up]
+		self.present(controller, animated: true)
 	}
 	
 	func textViewDidBeginEditing(_ textView: UITextView) {
