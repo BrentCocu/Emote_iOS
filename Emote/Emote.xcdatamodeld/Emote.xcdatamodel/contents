@@ -3,8 +3,15 @@
     <entity name="Emotion" representedClassName="Emotion" syncable="YES">
         <attribute name="color" attributeType="Transformable" customClassName=".UIColor" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="moments" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Moment" inverseName="emotion" inverseEntity="Moment" syncable="YES"/>
+    </entity>
+    <entity name="Moment" representedClassName="Moment" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="emotion" maxCount="1" deletionRule="Nullify" destinationEntity="Emotion" inverseName="moments" inverseEntity="Emotion" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Emotion" positionX="-63" positionY="-18" width="128" height="73"/>
+        <element name="Emotion" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Moment" positionX="-63" positionY="0" width="128" height="90"/>
     </elements>
 </model>

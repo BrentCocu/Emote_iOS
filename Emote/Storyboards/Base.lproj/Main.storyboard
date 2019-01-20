@@ -158,7 +158,7 @@
                                 <rect key="frame" x="0.0" y="116" width="375" height="502"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="vW6-eM-a07" detailTextLabel="eBA-Tk-wUc" imageView="8ma-t9-uVu" style="IBUITableViewCellStyleSubtitle" id="Br9-k1-FUZ" customClass="EmotionTableViewCell" customModule="Emote" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="vW6-eM-a07" detailTextLabel="eBA-Tk-wUc" imageView="8ma-t9-uVu" style="IBUITableViewCellStyleSubtitle" id="Br9-k1-FUZ" customClass="MomentTableViewCell" customModule="Emote" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Br9-k1-FUZ" id="DY4-DH-cBJ">
@@ -176,7 +176,7 @@
                                                     <rect key="frame" x="15" y="9" width="24" height="24"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eBA-Tk-wUc">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eBA-Tk-wUc" userLabel="Content">
                                                     <rect key="frame" x="54" y="25.5" width="44" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -186,15 +186,16 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="color" destination="8ma-t9-uVu" id="kaA-y4-2YS"/>
-                                            <outlet property="name" destination="vW6-eM-a07" id="OIa-fH-eNH"/>
+                                            <outlet property="color" destination="8ma-t9-uVu" id="bV5-oM-ewL"/>
+                                            <outlet property="content" destination="eBA-Tk-wUc" id="V2R-ZG-8D1"/>
+                                            <outlet property="name" destination="vW6-eM-a07" id="Avj-Xx-D5k"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="bqb-Lm-XQ2"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="k9T-QG-bjr"/>
+                                    <outlet property="dataSource" destination="AB6-9k-ngh" id="meK-Ra-hFB"/>
+                                    <outlet property="delegate" destination="AB6-9k-ngh" id="6DZ-D4-djg"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -208,9 +209,14 @@
                         <viewLayoutGuide key="safeArea" id="jL2-QJ-n3s"/>
                     </view>
                     <navigationItem key="navigationItem" title="Moments" id="jVw-uc-Lhr">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="exb-T6-eic"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="exb-T6-eic">
+                            <connections>
+                                <action selector="addMoment:" destination="AB6-9k-ngh" id="X6t-j9-qlu"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="momentList" destination="4GZ-C8-pWM" id="Awg-Z1-87Z"/>
                         <segue destination="Epa-hh-tjm" kind="show" identifier="showMomentDetail" id="gNg-A1-C4G"/>
                     </connections>
                 </viewController>
@@ -278,60 +284,72 @@
             </objects>
             <point key="canvasLocation" x="845.60000000000002" y="570.76461769115451"/>
         </scene>
-        <!--Edit Emotion Controller-->
+        <!--Edit Moment Controller-->
         <scene sceneID="Saf-aj-6ax">
             <objects>
-                <viewController id="Epa-hh-tjm" customClass="EditEmotionController" customModule="Emote" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Epa-hh-tjm" customClass="EditMomentController" customModule="Emote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WpG-MM-AeB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WZs-q0-Eug" customClass="UIControl">
-                                <rect key="frame" x="0.0" y="64" width="375" height="161"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="161" id="zDh-t4-5Bj"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="showColorPicker:" destination="Epa-hh-tjm" eventType="touchUpInside" id="OO7-F9-3BG"/>
-                                </connections>
-                            </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="PbD-VX-9nc">
-                                <rect key="frame" x="32" y="257" width="311" height="329"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fyr-tp-xYI">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Moment" placeholder="Name" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0ZZ-lt-pT7">
-                                        <rect key="frame" x="0.0" y="0.0" width="311" height="40"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="done"/>
-                                    </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cnj-Hw-aO0">
-                                        <rect key="frame" x="0.0" y="72" width="311" height="184.5"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WZs-q0-Eug" customClass="UIControl">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="161"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
-                                    </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Top-eU-Ukh">
-                                        <rect key="frame" x="0.0" y="288.5" width="311" height="40.5"/>
-                                        <state key="normal" title="Delete"/>
-                                        <connections>
-                                            <segue destination="VZb-sP-ORm" kind="unwind" unwindAction="unwindAndDeleteWithUnwindsegue:" id="IIY-Ua-SA6"/>
-                                        </connections>
-                                    </button>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="161" id="1wE-aI-rYh"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="PbD-VX-9nc">
+                                        <rect key="frame" x="32" y="193" width="311" height="295"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Moment" placeholder="Name" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0ZZ-lt-pT7">
+                                                <rect key="frame" x="0.0" y="0.0" width="311" height="36"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="done"/>
+                                            </textField>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cnj-Hw-aO0">
+                                                <rect key="frame" x="0.0" y="52" width="311" height="197"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="197" id="GGx-rW-E66"/>
+                                                </constraints>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Top-eU-Ukh">
+                                                <rect key="frame" x="0.0" y="265" width="311" height="30"/>
+                                                <state key="normal" title="Delete"/>
+                                                <connections>
+                                                    <segue destination="VZb-sP-ORm" kind="unwind" unwindAction="unwindAndDeleteWithUnwindsegue:" id="IIY-Ua-SA6"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                            </stackView>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="WZs-q0-Eug" secondAttribute="trailing" id="3xv-CK-JlR"/>
+                                    <constraint firstItem="PbD-VX-9nc" firstAttribute="top" secondItem="WZs-q0-Eug" secondAttribute="bottom" constant="32" id="7gY-Ct-w6r"/>
+                                    <constraint firstItem="WZs-q0-Eug" firstAttribute="top" secondItem="fyr-tp-xYI" secondAttribute="top" id="EGO-HU-VkB"/>
+                                    <constraint firstAttribute="trailing" secondItem="PbD-VX-9nc" secondAttribute="trailing" constant="32" id="NXt-rt-42U"/>
+                                    <constraint firstItem="WZs-q0-Eug" firstAttribute="centerX" secondItem="fyr-tp-xYI" secondAttribute="centerX" id="RGP-Ng-SFz"/>
+                                    <constraint firstItem="WZs-q0-Eug" firstAttribute="leading" secondItem="fyr-tp-xYI" secondAttribute="leading" id="e2R-i4-qqt"/>
+                                    <constraint firstItem="PbD-VX-9nc" firstAttribute="leading" secondItem="fyr-tp-xYI" secondAttribute="leading" constant="32" id="kRh-vU-rhO"/>
+                                    <constraint firstAttribute="bottom" secondItem="PbD-VX-9nc" secondAttribute="bottom" constant="16" id="xVj-Ol-sYD"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="PbD-VX-9nc" firstAttribute="top" secondItem="WZs-q0-Eug" secondAttribute="bottom" constant="32" id="Ayh-x8-cVG"/>
-                            <constraint firstItem="WZs-q0-Eug" firstAttribute="top" secondItem="LXu-yO-M3A" secondAttribute="top" id="PeZ-mz-Cmi"/>
-                            <constraint firstItem="WZs-q0-Eug" firstAttribute="leading" secondItem="LXu-yO-M3A" secondAttribute="leading" id="Uno-rP-PUL"/>
-                            <constraint firstItem="LXu-yO-M3A" firstAttribute="trailing" secondItem="WZs-q0-Eug" secondAttribute="trailing" id="bME-jl-SHe"/>
-                            <constraint firstItem="LXu-yO-M3A" firstAttribute="trailing" secondItem="PbD-VX-9nc" secondAttribute="trailing" constant="32" id="eHU-iK-uFt"/>
-                            <constraint firstItem="PbD-VX-9nc" firstAttribute="leading" secondItem="LXu-yO-M3A" secondAttribute="leading" constant="32" id="rfk-Ol-BsL"/>
-                            <constraint firstItem="LXu-yO-M3A" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="PbD-VX-9nc" secondAttribute="bottom" constant="32" id="xlN-Jz-HOG"/>
+                            <constraint firstItem="fyr-tp-xYI" firstAttribute="bottom" secondItem="LXu-yO-M3A" secondAttribute="bottom" id="4PS-lb-Sg2"/>
+                            <constraint firstItem="fyr-tp-xYI" firstAttribute="top" secondItem="LXu-yO-M3A" secondAttribute="top" id="Klp-Sb-XHj"/>
+                            <constraint firstAttribute="trailing" secondItem="fyr-tp-xYI" secondAttribute="trailing" id="PJb-ev-1fz"/>
+                            <constraint firstItem="fyr-tp-xYI" firstAttribute="leading" secondItem="WpG-MM-AeB" secondAttribute="leading" id="gtX-2R-Xr8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LXu-yO-M3A"/>
                     </view>
@@ -343,15 +361,17 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="color" destination="WZs-q0-Eug" id="4K6-nq-9Jx"/>
-                        <outlet property="deleteButton" destination="Top-eU-Ukh" id="S9M-MD-slZ"/>
-                        <outlet property="name" destination="0ZZ-lt-pT7" id="cIQ-4j-1io"/>
+                        <outlet property="color" destination="WZs-q0-Eug" id="3Hp-ei-ITh"/>
+                        <outlet property="content" destination="Cnj-Hw-aO0" id="Zsc-Oq-ivC"/>
+                        <outlet property="deleteButton" destination="Top-eU-Ukh" id="2u0-AD-FUz"/>
+                        <outlet property="name" destination="0ZZ-lt-pT7" id="iZS-vn-jQ6"/>
+                        <outlet property="scrollView" destination="fyr-tp-xYI" id="Uar-Hc-mqD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E06-pa-GTn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="VZb-sP-ORm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2382" y="571"/>
+            <point key="canvasLocation" x="2381.5999999999999" y="570.76461769115451"/>
         </scene>
     </scenes>
     <resources>

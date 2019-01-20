@@ -1,5 +1,5 @@
 //
-//  CoreDataManager.swift
+//  MomentRepository.swift
 //  Emote
 //
 //  Created by Brent Cocu on 20/01/2019.
@@ -8,11 +8,10 @@
 
 import Foundation
 import CoreData
-import UIKit
 
-class EmotionRepository {
+class MomentRepository {
 	
-	static let shared = EmotionRepository()
+	static let shared = MomentRepository()
 	
 	var persistentContainer = BaseRepository.shared.persistentContainer
 	
@@ -31,41 +30,43 @@ class EmotionRepository {
 		}
 	}
 	
-	func getAll() -> [Emotion]? {
+	func getAll() -> [Moment]? {
 		let context = persistentContainer.viewContext
-		let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Emotion")
+		let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Moment")
 		
 		do {
-			let emotions = try context.fetch(fetchRequest)
-			return emotions as? [Emotion]
+			let moments = try context.fetch(fetchRequest)
+			return moments as? [Moment]
 		} catch let error as NSError {
 			print("error on getAll \(error), \(error.userInfo)")
 			return nil
 		}
 	}
 	
-	func insert(name: String, color: UIColor) -> Emotion? {
+	func insert(content: String, date: Date, emotion: Emotion) -> Moment? {
 		let context = persistentContainer.viewContext
-		let entity = NSEntityDescription.entity(forEntityName: "Emotion", in: context)!
-		let emotion = NSManagedObject(entity: entity, insertInto: context)
+		let entity = NSEntityDescription.entity(forEntityName: "Moment", in: context)!
+		let moment = NSManagedObject(entity: entity, insertInto: context)
 		
-		emotion.setValue(name, forKeyPath: "name")
-		emotion.setValue(color, forKeyPath: "color")
+		moment.setValue(content, forKeyPath: "content")
+		moment.setValue(date, forKeyPath: "date")
+		moment.setValue(emotion, forKey: "emotion")
 		
 		do {
 			try context.save()
-			return emotion as? Emotion
+			return moment as? Moment
 		} catch let error as NSError {
 			print("error on insert \(error), \(error.userInfo)")
 			return nil
 		}
 	}
 	
-	func update(name: String, color: UIColor, emotion: Emotion) {
+	func update(content: String, date: Date, emotion: Emotion, moment: Moment) {
 		let context = persistentContainer.viewContext
 		
-		emotion.setValue(name, forKey: "name")
-		emotion.setValue(color, forKey: "color")
+		moment.setValue(content, forKeyPath: "content")
+		moment.setValue(date, forKeyPath: "date")
+		moment.setValue(emotion, forKey: "emotion")
 		
 		do {
 			try context.save()
@@ -74,10 +75,10 @@ class EmotionRepository {
 		}
 	}
 	
-	func delete(emotion: Emotion) {
+	func delete(moment: Moment) {
 		let context = persistentContainer.viewContext
 		
-		context.delete(emotion)
+		context.delete(moment)
 		
 		do {
 			try context.save()
@@ -88,12 +89,12 @@ class EmotionRepository {
 	
 	func deleteAll() {
 		let context = persistentContainer.viewContext
-		let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Emotion")
+		let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Moment")
 		
 		do {
-			let emotions = try context.fetch(fetchRequest)
-			for emotion in emotions {
-				context.delete(emotion)
+			let moments = try context.fetch(fetchRequest)
+			for moment in moments {
+				context.delete(moment)
 			}
 			try context.save()
 		} catch let error as NSError {
