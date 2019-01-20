@@ -34,8 +34,12 @@ class MomentController: UIViewController, UITableViewDataSource, UITableViewDele
 		let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MomentTableViewCell
 		let moment = moments[indexPath.item]
 		cell.name.text = moment.emotion?.name
+		let formatter = DateFormatter()
+		formatter.dateFormat = "h:mm - MMM d yyyy"
+		cell.content.text = formatter.string(from: moment.date! as Date)
 		cell.color.setImageColor(color: (moment.emotion?.color)!)
 		return cell
+		// h:mm - MMM d yyyy
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
