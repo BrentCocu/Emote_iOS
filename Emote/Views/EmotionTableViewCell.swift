@@ -15,12 +15,3 @@ class EmotionTableViewCell: UITableViewCell {
 	@IBOutlet weak var name: UILabel!
 	
 }
-
-// SOURCE: https://stackoverflow.com/questions/31803157/how-can-i-color-a-uiimage-in-swift
-extension UIImageView {
-	func setImageColor(color: UIColor) {
-		let templateImage = self.image?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
-		self.image = templateImage
-		self.tintColor = color
-	}
-}
