@@ -8,22 +8,44 @@
 
 /* Begin PBXBuildFile section */
 		0709C52A21F37396004F2A48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0709C52921F37396004F2A48 /* AppDelegate.swift */; };
-		0709C52C21F37396004F2A48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0709C52B21F37396004F2A48 /* ViewController.swift */; };
+		0709C52C21F37396004F2A48 /* EmotionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0709C52B21F37396004F2A48 /* EmotionController.swift */; };
 		0709C52F21F37396004F2A48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0709C52D21F37396004F2A48 /* Main.storyboard */; };
 		0709C53221F37396004F2A48 /* Emote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0709C53021F37396004F2A48 /* Emote.xcdatamodeld */; };
 		0709C53421F37397004F2A48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0709C53321F37397004F2A48 /* Assets.xcassets */; };
 		0709C53721F37397004F2A48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0709C53521F37397004F2A48 /* LaunchScreen.storyboard */; };
+		0709C53F21F3861D004F2A48 /* MomentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0709C53E21F3861D004F2A48 /* MomentController.swift */; };
+		0709C74D21F3EB56004F2A48 /* EmotionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0709C74C21F3EB56004F2A48 /* EmotionRepository.swift */; };
+		0709C75421F3F198004F2A48 /* Emotion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0709C75221F3F198004F2A48 /* Emotion+CoreDataClass.swift */; };
+		0709C75521F3F198004F2A48 /* Emotion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0709C75321F3F198004F2A48 /* Emotion+CoreDataProperties.swift */; };
+		0709C75821F3FC4E004F2A48 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0709C75721F3FC4E004F2A48 /* BaseRepository.swift */; };
+		075D3E5D21F41667004E6A2F /* EmotionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D3E5C21F41667004E6A2F /* EmotionTableViewCell.swift */; };
+		076AAB3221F4A3070073D68A /* EditEmotionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076AAB3121F4A3070073D68A /* EditEmotionController.swift */; };
+		076AAB3721F4D8FD0073D68A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076AAB3621F4D8FD0073D68A /* UIColorExtension.swift */; };
+		076AAB3921F4F9E90073D68A /* EditMomentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076AAB3821F4F9E90073D68A /* EditMomentController.swift */; };
+		FC1F9029305A1E19D2A52C0D /* Pods_Emote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526EC1002C9981B3215B1BC5 /* Pods_Emote.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0709C52621F37396004F2A48 /* Emote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0709C52921F37396004F2A48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0709C52B21F37396004F2A48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0709C52B21F37396004F2A48 /* EmotionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionController.swift; sourceTree = "<group>"; };
 		0709C52E21F37396004F2A48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0709C53121F37396004F2A48 /* Emote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Emote.xcdatamodel; sourceTree = "<group>"; };
 		0709C53321F37397004F2A48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0709C53621F37397004F2A48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0709C53821F37397004F2A48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0709C53E21F3861D004F2A48 /* MomentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentController.swift; sourceTree = "<group>"; };
+		0709C74C21F3EB56004F2A48 /* EmotionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionRepository.swift; sourceTree = "<group>"; };
+		0709C75221F3F198004F2A48 /* Emotion+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Emotion+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0709C75321F3F198004F2A48 /* Emotion+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Emotion+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0709C75721F3FC4E004F2A48 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
+		075D3E5C21F41667004E6A2F /* EmotionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionTableViewCell.swift; sourceTree = "<group>"; };
+		076AAB3121F4A3070073D68A /* EditEmotionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEmotionController.swift; sourceTree = "<group>"; };
+		076AAB3621F4D8FD0073D68A /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		076AAB3821F4F9E90073D68A /* EditMomentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMomentController.swift; sourceTree = "<group>"; };
+		21F6378EC4D4A1087E8DAA4F /* Pods-Emote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emote.release.xcconfig"; path = "Pods/Target Support Files/Pods-Emote/Pods-Emote.release.xcconfig"; sourceTree = "<group>"; };
+		526EC1002C9981B3215B1BC5 /* Pods_Emote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1328618A96FB5C2F4D95D55 /* Pods-Emote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Emote/Pods-Emote.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC1F9029305A1E19D2A52C0D /* Pods_Emote.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +65,8 @@
 			children = (
 				0709C52821F37396004F2A48 /* Emote */,
 				0709C52721F37396004F2A48 /* Products */,
+				3CBF39A31FAB9D1A61F0628A /* Pods */,
+				B4395B49A86E0A1C247026D6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +81,89 @@
 		0709C52821F37396004F2A48 /* Emote */ = {
 			isa = PBXGroup;
 			children = (
+				076AAB3521F4D8E50073D68A /* Extensions */,
+				075D3E5B21F41640004E6A2F /* Views */,
+				0709C54021F387E6004F2A48 /* Models */,
 				0709C52921F37396004F2A48 /* AppDelegate.swift */,
-				0709C52B21F37396004F2A48 /* ViewController.swift */,
-				0709C52D21F37396004F2A48 /* Main.storyboard */,
+				0709C54221F3881F004F2A48 /* Controllers */,
+				0709C54321F38859004F2A48 /* Storyboards */,
 				0709C53321F37397004F2A48 /* Assets.xcassets */,
-				0709C53521F37397004F2A48 /* LaunchScreen.storyboard */,
 				0709C53821F37397004F2A48 /* Info.plist */,
 				0709C53021F37396004F2A48 /* Emote.xcdatamodeld */,
+				0709C75621F3FBCE004F2A48 /* Repositories */,
 			);
 			path = Emote;
+			sourceTree = "<group>";
+		};
+		0709C54021F387E6004F2A48 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0709C75221F3F198004F2A48 /* Emotion+CoreDataClass.swift */,
+				0709C75321F3F198004F2A48 /* Emotion+CoreDataProperties.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0709C54221F3881F004F2A48 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0709C52B21F37396004F2A48 /* EmotionController.swift */,
+				0709C53E21F3861D004F2A48 /* MomentController.swift */,
+				076AAB3121F4A3070073D68A /* EditEmotionController.swift */,
+				076AAB3821F4F9E90073D68A /* EditMomentController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0709C54321F38859004F2A48 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0709C52D21F37396004F2A48 /* Main.storyboard */,
+				0709C53521F37397004F2A48 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		0709C75621F3FBCE004F2A48 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				0709C74C21F3EB56004F2A48 /* EmotionRepository.swift */,
+				0709C75721F3FC4E004F2A48 /* BaseRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		075D3E5B21F41640004E6A2F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				075D3E5C21F41667004E6A2F /* EmotionTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		076AAB3521F4D8E50073D68A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				076AAB3621F4D8FD0073D68A /* UIColorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3CBF39A31FAB9D1A61F0628A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1328618A96FB5C2F4D95D55 /* Pods-Emote.debug.xcconfig */,
+				21F6378EC4D4A1087E8DAA4F /* Pods-Emote.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B4395B49A86E0A1C247026D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				526EC1002C9981B3215B1BC5 /* Pods_Emote.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +173,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0709C53B21F37397004F2A48 /* Build configuration list for PBXNativeTarget "Emote" */;
 			buildPhases = (
+				7890B027E28BE9784FA536B7 /* [CP] Check Pods Manifest.lock */,
 				0709C52221F37396004F2A48 /* Sources */,
 				0709C52321F37396004F2A48 /* Frameworks */,
 				0709C52421F37396004F2A48 /* Resources */,
+				A247D912B1CCC037AF73479E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -99,6 +200,11 @@
 				TargetAttributes = {
 					0709C52521F37396004F2A48 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.DataProtection = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -109,6 +215,7 @@
 			knownRegions = (
 				en,
 				Base,
+				nl,
 			);
 			mainGroup = 0709C51D21F37396004F2A48;
 			productRefGroup = 0709C52721F37396004F2A48 /* Products */;
@@ -133,14 +240,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7890B027E28BE9784FA536B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Emote-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A247D912B1CCC037AF73479E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Emote/Pods-Emote-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MKColorPicker/MKColorPicker.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MKColorPicker.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Emote/Pods-Emote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0709C52221F37396004F2A48 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				075D3E5D21F41667004E6A2F /* EmotionTableViewCell.swift in Sources */,
+				076AAB3221F4A3070073D68A /* EditEmotionController.swift in Sources */,
+				0709C74D21F3EB56004F2A48 /* EmotionRepository.swift in Sources */,
+				0709C75521F3F198004F2A48 /* Emotion+CoreDataProperties.swift in Sources */,
+				0709C75821F3FC4E004F2A48 /* BaseRepository.swift in Sources */,
 				0709C53221F37396004F2A48 /* Emote.xcdatamodeld in Sources */,
-				0709C52C21F37396004F2A48 /* ViewController.swift in Sources */,
+				0709C53F21F3861D004F2A48 /* MomentController.swift in Sources */,
+				0709C52C21F37396004F2A48 /* EmotionController.swift in Sources */,
+				076AAB3721F4D8FD0073D68A /* UIColorExtension.swift in Sources */,
 				0709C52A21F37396004F2A48 /* AppDelegate.swift in Sources */,
+				0709C75421F3F198004F2A48 /* Emotion+CoreDataClass.swift in Sources */,
+				076AAB3921F4F9E90073D68A /* EditMomentController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +333,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -217,13 +381,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -231,6 +396,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -272,23 +438,26 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		0709C53C21F37397004F2A48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1328618A96FB5C2F4D95D55 /* Pods-Emote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZUN4LY2ML9;
 				INFOPLIST_FILE = Emote/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,11 +471,13 @@
 		};
 		0709C53D21F37397004F2A48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21F6378EC4D4A1087E8DAA4F /* Pods-Emote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZUN4LY2ML9;
 				INFOPLIST_FILE = Emote/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

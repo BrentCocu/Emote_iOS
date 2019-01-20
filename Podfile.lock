@@ -1,0 +1,16 @@
+PODS:
+  - MKColorPicker (1.2)
+
+DEPENDENCIES:
+  - MKColorPicker
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - MKColorPicker
+
+SPEC CHECKSUMS:
+  MKColorPicker: 8998b2ab977e4f240fdf254db27a18b810da3cfc
+
+PODFILE CHECKSUM: 603c58168a72b47f4a62e866ec64d16dbaf6d682
+
+COCOAPODS: 1.5.3
