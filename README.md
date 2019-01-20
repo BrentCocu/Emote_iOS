@@ -14,6 +14,8 @@ Download the zip file on the master branch or clone the project through git. Mak
 - Brent Cocu
 
 ## References
-- "App Development with Swift: Swift 4 Edition"
+- [App Development with Swift: Swift 4 Edition](https://itunes.apple.com/us/book/app-development-with-swift/id1219117996?mt=11)
+- [Swift Documentation](https://swift.org/documentation/#the-swift-programming-language)
+- [iOS Developer Library](https://developer.apple.com/documentation)
 - Only one instance where I blatantly copied code:
   - UIImageViewExtension.swift (source in comment)
