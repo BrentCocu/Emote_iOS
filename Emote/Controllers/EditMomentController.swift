@@ -25,7 +25,10 @@ class EditMomentController: UIViewController, UITextFieldDelegate, UITextViewDel
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		updateComponents()
+		color.backgroundColor = emotion?.color
+		content.text = _content
+		name.text = emotion?.name
+		deleteButton.isHidden = (moment == nil)
 		
 		// hide keyboard on 'done'
 		name.delegate = self
@@ -34,9 +37,7 @@ class EditMomentController: UIViewController, UITextFieldDelegate, UITextViewDel
 	
 	private func updateComponents() {
 		color.backgroundColor = emotion?.color
-		content.text = _content
 		name.text = emotion?.name
-		deleteButton.isHidden = (moment == nil)
 	}
 	
 	func textFieldShouldReturn(_ textField: UITextField) -> Bool {

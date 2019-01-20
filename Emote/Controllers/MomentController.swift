@@ -70,7 +70,7 @@ class MomentController: UIViewController, UITableViewDataSource, UITableViewDele
 	@IBAction func unwindAndUpdate(unwindsegue: UIStoryboardSegue) {
 		let source = unwindsegue.source as? EditMomentController
 		
-		if let emotion = source?.emotion, let content = source?._content {
+		if let emotion = source?.emotion, let content = source?.content.text {
 			if let moment = source?.moment {
 				MomentRepository.shared.update(content: content, date: moment.date! as Date, emotion: emotion, moment: moment)
 			} else {
